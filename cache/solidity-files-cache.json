@@ -797,6 +797,45 @@
       "artifacts": [
         "Lock"
       ]
+    },
+    "/mnt/d/blockchain/nft/contracts/IdentityNFT.sol": {
+      "lastModificationDate": 1744407249478,
+      "contentHash": "e90a4d2e88b8ae9fe58603257b10c21d",
+      "sourceName": "contracts/IdentityNFT.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IdentityNFT"
+      ]
     }
   }
 }
