@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -50,9 +50,6 @@ contract CourseRegistration is Ownable {
     }
 
     /// @notice Register for a course.
-    /// Requirements:
-    /// - Must hold a valid Identity NFT.
-    /// - Must have paid the fee for the current cycle.
     function registerCourse(uint256 courseId) public {
         require(courses[courseId].isActive, "Course is not active");
         require(

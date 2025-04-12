@@ -1,5 +1,4 @@
-// File: FeePayment.sol
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier:  GPL-3.0
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -40,10 +39,6 @@ contract FeePayment is Ownable {
     }
 
     /// @notice Pay the semester fee.
-    /// Requirements:
-    /// - Must hold an Identity NFT.
-    /// - Exact fee amount required.
-    /// - Fee not already paid in the current cycle.
     function payFee() public payable {
         require(identityNFT.identityTokenByOwner(msg.sender) != 0, "No Identity NFT found");
         require(feePaidCycle[msg.sender] != feeCycle, "Fee already paid for this cycle");

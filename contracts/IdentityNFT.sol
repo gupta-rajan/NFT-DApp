@@ -1,5 +1,4 @@
-// File: IdentityNFT.sol
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier:  GPL-3.0
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -42,12 +41,6 @@ contract IdentityNFT is ERC721, Ownable {
     }
 
     /// @notice Mint a new Identity NFT.
-    /// @param to The recipient address.
-    /// @param name Full name.
-    /// @param dateOfBirth Date of birth.
-    /// @param role Role of the individual (Student or Professor).
-    /// @param ipfsFileId IPFS file ID of the government-issued document.
-    /// Requirements: One NFT per address.
     function mintIdentity(
         address to,
         string memory name,

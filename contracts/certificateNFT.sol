@@ -21,10 +21,6 @@ contract CertificateNFT is ERC721, Ownable {
     constructor() ERC721("IITDharwadCertificate", "IITDH-CERT") Ownable(msg.sender) {}
 
     // @notice Mint a new certificate NFT.
-    // @param to: Recipient address.
-    // @param courseId: Course ID (or 0 for degree).
-    // @param certificateType: Type of certificate.
-    // @param ipfsFileId: IPFS file ID of the certificate document.
     function mintCertificate(
         address to,
         uint256 courseId,
