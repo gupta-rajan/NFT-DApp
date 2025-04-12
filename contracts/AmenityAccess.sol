@@ -5,7 +5,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @notice Interface to interact with the IdentityNFT contract.
 interface IIdentityNFT {
-    function identityTokenByOwner(address owner) external view returns (uint256);
+    function identityTokenByOwner(
+        address owner
+    ) external view returns (uint256);
 }
 
 contract AmenityAccess is Ownable {
@@ -30,11 +32,36 @@ contract AmenityAccess is Ownable {
 
     function hasAccess(uint256 amenityId) public view returns (bool) {
         require(amenityId > 0 && amenityId <= amenityCounter, "Invalid amenity");
-        return identityNFT.identityTokenByOwner(msg.sender) != 0; // anyone can access any amenity. Logic can be implemented to restrict access of specific amenities to specific set of people
+        // Admin (owner) should have access to all amenities
+        if (msg.sender == owner()) {
+            return true;
+        }
+        return identityNFT.identityTokenByOwner(msg.sender) != 0;
+    }
+
+    function getIDToken() public view returns (uint256) {
+        return identityNFT.identityTokenByOwner(msg.sender);
     }
 
     /// @notice Attempt to access an amenity.
     function accessAmenity(uint256 amenityId) public {
         emit AccessAttempt(msg.sender, amenityId, hasAccess(amenityId));
+    }
+
+    function getAllAmenities()
+        external
+        view
+        returns (uint256[] memory, string[] memory)
+    {
+        uint256[] memory ids = new uint256[](amenityCounter);
+        string[] memory names = new string[](amenityCounter);
+
+        for (uint256 i = 0; i < amenityCounter; i++) {
+            uint256 id = i + 1;
+            ids[i] = id;
+            names[i] = amenities[id];
+        }
+
+        return (ids, names);
     }
 }
