@@ -797,6 +797,163 @@
       "artifacts": [
         "IdentityNFT"
       ]
+    },
+    "/mnt/d/blockchain/nft/contracts/CertificateNFT.sol": {
+      "lastModificationDate": 1744448949766,
+      "contentHash": "024a81f1ff6e5f0d01d80b6fe4cbaeea",
+      "sourceName": "contracts/CertificateNFT.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "CertificateNFT"
+      ]
+    },
+    "/mnt/d/blockchain/nft/contracts/FeePayment.sol": {
+      "lastModificationDate": 1744448937364,
+      "contentHash": "1822bde93847c067538ae298747bc133",
+      "sourceName": "contracts/FeePayment.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "FeePayment",
+        "IIdentityNFT"
+      ]
+    },
+    "/mnt/d/blockchain/nft/contracts/CourseRegistration.sol": {
+      "lastModificationDate": 1744448942204,
+      "contentHash": "f0f006d8b2d3f5f7e32f58f0ef754def",
+      "sourceName": "contracts/CourseRegistration.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "CourseRegistration",
+        "IFeePayment",
+        "IIdentityNFT"
+      ]
+    },
+    "/mnt/d/blockchain/nft/contracts/AmenityAccess.sol": {
+      "lastModificationDate": 1744453762310,
+      "contentHash": "a77948fdccc7925bf560aa06d4c2e339",
+      "sourceName": "contracts/AmenityAccess.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AmenityAccess",
+        "IIdentityNFT"
+      ]
     }
   }
 }
