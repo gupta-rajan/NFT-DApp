@@ -877,8 +877,8 @@
       ]
     },
     "/mnt/d/blockchain/nft/contracts/CourseRegistration.sol": {
-      "lastModificationDate": 1744448942204,
-      "contentHash": "f0f006d8b2d3f5f7e32f58f0ef754def",
+      "lastModificationDate": 1744462378439,
+      "contentHash": "e571d4497bd925a19c96015e4a560808",
       "sourceName": "contracts/CourseRegistration.sol",
       "solcConfig": {
         "version": "0.8.28",
