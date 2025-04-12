@@ -11,7 +11,8 @@ contract IdentityNFT is ERC721, Ownable {
     // Role differentiation: Student or Professor.
     enum Role {
         Student,
-        Professor
+        Professor,
+        Admin
     }
 
     // Identity structure now includes role and IPFS file ID for government document.
@@ -36,7 +37,9 @@ contract IdentityNFT is ERC721, Ownable {
         Role role
     );
 
-    constructor() ERC721("IITDharwadIdentity", "IITD-ID") Ownable(msg.sender) {}
+    constructor() ERC721("IITDharwadIdentity", "IITD-ID") Ownable(msg.sender) {
+        mintIdentity(msg.sender, "Admin", "22-07-2003",Role.Admin,"");
+    }
 
     /// @notice Mint a new Identity NFT.
     /// @param to The recipient address.
