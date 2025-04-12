@@ -51,8 +51,11 @@ cd project-folder
 
 ### 2. Install Project Dependencies
 npm install          # install root dependencies
+
 cd client
+
 npm install          # install frontend dependencies
+
 cd ..
 
 ---
@@ -66,7 +69,9 @@ Copy the private key of the first account — it will be used for contract deplo
 Create a .env file inside client/src/ and paste your Pinata keys:
 
 REACT_APP_PINATA_API_KEY=21767ebeecdecb816506
+
 REACT_APP_PINATA_SECRET_API_KEY=f30c28168542a536ec5700de9869fe31b35ab0903ae63bc2b73ce2fdb637dfb0
+
 REACT_APP_PINATA_JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ---
@@ -76,14 +81,21 @@ Edit hardhat.config.js like this:
 require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
+
   solidity: "0.8.28",
+
   networks: {
+
     ganache: {
+
       url: "http://127.0.0.1:7545",
+
       accounts: [
         "YOUR_GANACHE_PRIVATE_KEY"
       ]
+
     }
+
   }
 };
 
@@ -105,11 +117,14 @@ It will also generate ABI files in client/src/abi and store addresses in client/
 
 ### 8. Start Backend
 app uses an Express backend:
+
 cd client
+
 npm install
 
 go back to root, then 
 cd backend
+
 npm install
 
 npm run dev 
