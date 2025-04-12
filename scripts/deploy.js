@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const IdentityNFT = await hre.ethers.getContractFactory("IITIdentityNFT");
+  const IdentityNFT = await hre.ethers.getContractFactory("IdentityNFT");
   const identityNFT = await IdentityNFT.deploy();
 
   // ✅ Use waitForDeployment instead of deployed
@@ -15,4 +15,4 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
-// Contract deployed to: 0xC584C8A851671c5d99A34A89cBAD1Fb62Fe7326c
+// Contract deployed to: 0x7d5d4D70667433884fb3846a0A1bf298c2F7b0fD
