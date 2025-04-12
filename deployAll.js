@@ -42,7 +42,7 @@ async function deployContracts() {
 
       abiFiles.forEach(file => {
         fs.copyFileSync(path.join(artifactPath, file), path.join(abiFolderPath, file));
-        console.log(`📦 Copied ABI: ${file}`);
+        console.log(`Copied ABI: ${file}`);
       });
 
     } catch (err) {
@@ -52,7 +52,7 @@ async function deployContracts() {
   }
 
   fs.writeFileSync(addressesPath, JSON.stringify(deployedAddresses, null, 2));
-  console.log("💾 Saved contract addresses to client/src/addresses.json");
+  console.log("Saved contract addresses to client/src/addresses.json");
 
   generateConfig();
 }
